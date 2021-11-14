@@ -1,0 +1,35 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Accounts.AccountChanged.v1",
+  "description": "json schema for account changed event (version 1)",
+  "type": "object",
+  "additionalProperties": false,
+
+  "required": [
+    "event_id",
+    "event_version",
+    "event_name",
+    "data"
+  ],
+  "definitions": {
+    "event_data": {
+      "type": "object",
+      "properties": {
+        "PublicId": { "type": "string" },
+        "Username": { "type": "string" },
+        "Role": { "type": "string" }
+      },
+      "required": [
+        "PublicId",
+        "Username",
+        "Role"
+      ]
+    }
+  },
+  "properties": {
+    "event_id": { "type": "string" },
+    "event_version": { "enum": [ 1 ] },
+    "event_name": { "type": "string" },
+    "data": { "$ref": "#/definitions/event_data" }
+  }
+}
