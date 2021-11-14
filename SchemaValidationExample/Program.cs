@@ -24,7 +24,7 @@ namespace SchemaValidationExample
                 }
             };
             
-            var validationResult = await SchemaValidator.Validate(JsonSerializer.Serialize(payload, new JsonSerializerOptions {PropertyNameCaseInsensitive = true}), "Accounts.AccountChanged", 1);
+            var validationResult = await SchemaValidator.Validate(JsonSerializer.Serialize(payload), "Accounts.AccountChanged", 1);
             Console.WriteLine($"Validation result: {validationResult.Success};");
 
 
