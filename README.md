@@ -1,7 +1,7 @@
 # NSchemaRegistry
 Simple Schema Registry based on https://github.com/RicoSuter/NJsonSchema
 
-Example schema located under _NSchemaRegistry/Schemas/Accounts/AccountChanged_ folder
+Example schema is located under _NSchemaRegistry/Schemas/Accounts/AccountChanged_
 
 ```csharp
 var payload = new
@@ -22,4 +22,4 @@ Console.WriteLine($"Validation result: {validationResult.Success};");
 
 ```
 
-When creating a new schema it's neccessary to enable the "Copy To Output Directory" property for a json file.
+When creating a new schema it's neccessary to enable the "Copy To Output Directory" property for a json file in Visual Studio
