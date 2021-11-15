@@ -16,8 +16,9 @@ var payload = new
         Role = "user"
     }
 };
-            
-var validationResult = await SchemaValidator.Validate(JsonSerializer.Serialize(payload), "Accounts.AccountChanged", 1);
+var json = JsonSerializer.Serialize(payload);
+
+var validationResult = await SchemaValidator.Validate(data: json, type: "Accounts.AccountChanged", version: 1);
 Console.WriteLine($"Validation result: {validationResult.Success};");
 
 ```
